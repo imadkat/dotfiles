@@ -9,6 +9,7 @@ set $up       k
 set $right    l
 set $br       bracketright
 set $bl       bracketleft
+set $term-float LIBGL_ALWAYS_SOFTWARE=1 alacritty
 
 # Wallpapers
 set $primary_bg "$HOME/.local/share/bg/primary.jpg"  
@@ -189,7 +190,7 @@ bindsym $mod+Shift+space    focus mode_toggle
 floating_modifier $mod      normal
 bindsym $mod+space          floating toggle
 # Programs
-bindsym $mod+Return         exec alacritty
+bindsym $mod+Return         exec $term-float 
 bindsym $mod+w              kill
 # Sway
 bindsym $mod+Shift+r        reload
@@ -260,7 +261,7 @@ for_window [class="protonvpn"]                      floating enable
 for_window [class="Hubstaff"]                       floating enable
 for_window [class="Tixati"]                         floating enable
 for_window [app_id="com.github.wwmm.easyeffects"]   floating enable
-for_window [app_id="Alacritty"]                     border pixel 2
+for_window [app_id="$term-float"]                     border pixel 2
 
 #----------#
 # INCLUDES #
