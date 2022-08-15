@@ -1,0 +1,9 @@
+font=mono
+font-size=10
+color=000000
+inside-color=282828
+image=DP-1:~/.local/share/bg/right.lck.jpg
+image=HDMI-A-1:~/.local/share/bg/primary.lck.jpg
+image=LVDS-1:~/.local/share/bg/primary.lck.jpg
+ignore-empty-password
+daemonize

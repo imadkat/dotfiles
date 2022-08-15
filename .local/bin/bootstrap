@@ -1,0 +1,196 @@
+#!/bin/bash
+
+#------#
+# SUDO #
+#------#
+echo "setting up sudoers..."
+sudo sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+echo "Defaults timestamp_timeout=60" | sudo tee -a /etc/sudoers
+echo "✓ sudoers file is set"
+
+sleep 2
+clear
+
+#--------#
+# PACMAN #
+#--------#
+echo "configuring up pacman..."
+sudo sed -i 's/#Color/Color/' /etc/pacman.conf
+sudo sed -i 's/#VerbosePkgList/VerbosePkgList/' /etc/pacman.conf
+sudo pacman --noconfirm -Sy
+echo "✓ pacman configured"
+
+sleep 2
+clear
+
+#-------------------#
+# ARCHLINUX-KEYRING #
+#-------------------#
+echo "updating archlinux-keyring and gnupg..."
+sudo pacman --needed --noconfirm -Sy archlinux-keyring gnupg 
+echo "populating pacman keys..."
+sudo pacman-key --populate
+echo "✓ keyring updated"
+
+sleep 2
+clear
+
+#-----------#
+# REFLECTOR #
+#-----------#
+echo "setting up mirrors..."
+sudo pacman --needed --noconfirm -S reflector
+echo "configuring mirrors..."
+sudo reflector --latest 30
+echo "✓ mirrors configured"
+
+sleep 2
+clear
+
+#------#
+# PARU #
+#------#
+echo "checking paru..."
+if ! [ $(command -v paru) ]; then
+  echo "installing paru..."
+  cwd="$(pwd)"
+  cd /tmp && rm -rf paru/ && git clone "https://aur.archlinux.org/paru.git" paru && cd paru
+  echo "building paru..."
+  makepkg --noconfirm -si
+  cd "$cwd" || exit
+fi
+
+if ! [ "$?" -eq 0 ]; then
+  echo "x paru didn't install" && exit
+fi
+
+echo "✓ paru installed"
+
+sleep 2
+clear
+#----------#
+# PACKAGES #
+#----------#
+echo "installing packages..."
+PKGS="$HOME/.local/share/packages"
+TOTAL="$(wc -l "$PKGS" | awk '{print $1}')"
+COUNT=0
+while IFS= read -r p; do
+  COUNT=$((COUNT+1))
+  echo "[$COUNT/$TOTAL] $p"
+  echo "-----------------"
+  [ "$(echo "$p" | grep -ic "#")" -gt 0 ] && echo "$p is commented out" && clear && continue
+  paru --needed --noconfirm --removemake -S "$p"
+  sleep 1
+  clear
+done < "$PKGS"
+echo "✓ packages installed"
+
+sleep 2
+clear
+#------#
+# CRON #
+#------#
+echo "✓ setting up cron..."
+sudo systemctl enable cronie --now
+echo "✓ cron setup complete..."
+
+sleep 2
+clear
+#-------------#
+# BACKGROUNDS #
+#-------------#
+echo "setting up backgrounds..."
+cwd="$(pwd)"
+BG_DIR="$HOME/.local/share/bg"
+
+rm -rf BG_DIR
+mkdir -p "$BG_DIR"
+cd "$BG_DIR" || exit 1
+
+if ! [ -f "$BG_DIR/primary.jpg" ]; then
+  curl -L "https://w.wallhaven.cc/full/1k/wallhaven-1ko533.jpg" -o primary.jpg
+  echo "optimizing primary screen bg for lockscreen..."
+  [ -f primary.jpg ] && convert -scale 10% -blur 0x5 -resize 1000% primary.jpg primary.lck.jpg
+  echo "✓ primary screen wallpaper set"
+else
+  echo "✓ primary screen bg already downloaded"
+fi
+if ! [ -f "$BG_DIR/right.jpg" ]; then
+  curl -L "https://w.wallhaven.cc/full/g7/wallhaven-g7e6xl.jpg" -o right.jpg
+  echo "optimizing right screen bg for lockscreen..."
+  [ -f right.jpg ] && convert -scale 10% -blur 0x5 -resize 1000% right.jpg right.lck.jpg
+  echo "✓ right screen bg set"
+else
+  echo "✓ right screen bg already downloaded"
+fi
+
+cd "$cwd" || exit 1
+
+sleep 2
+clear
+#-------------#
+# ZSH PLUGINS #
+#-------------#
+echo "installing zsh plugins..."
+
+[ -z "$ZDOTDIR" ] && export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+plugdir="${ZDOTDIR}/plugins"
+if ! [ -e "$plugdir/fsh" ]; then 
+  ! [ -d "$plugdir" ] && mkdir -p "$plugdir"
+  git clone --depth=1 "https://github.com/zdharma-continuum/fast-syntax-highlighting" "${plugdir}/fsh"
+  rm -rf "${plugdir}/fsh/.git" 
+
+  echo "sourcing the plugin..."
+  source "${plugdir}/fsh/fast-syntax-highlighting.plugin.zsh"
+fi
+echo "✓ zsh plugins installed"
+
+sleep 2
+clear
+#--------#
+# SHELLS #
+#--------#
+echo "setting default shells..."
+cwd="$(pwd)"
+cd /bin || exit 1
+sudo ln -sf dash /bin/sh
+cd "$cwd" || exit 1
+chsh -s /usr/bin/zsh
+cd "$cwd" || exit 1
+echo "✓ shells set"
+
+sleep 2
+clear
+#----------#
+# GRAPHICS #
+#----------#
+echo "COGL_ATLAS_DEFAULT_BLIT_MODE=framebuffer" | sudo tee -a /etc/environment
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo tee -a /etc/X11/xorg.conf.d/20-intel.conf > /dev/null <<EOT
+Section "Device"
+  Identifier "Intel Graphics"
+  Driver "intel"
+  Option "TearFree" "true"
+EndSection
+EOT
+
+sleep 2
+clear
+#--------#
+# DEVENV #
+#--------#
+echo "setting up development environment..."
+echo "setting up neovim..."
+git clone https://github.com/heyzsh/nvim-dots ~/.config/nvim
+echo "✓ done"
+
+sleep 2
+clear
+#----------#
+# CLEAN UP #
+#----------#
+echo "cleaning up..."
+# clean up here
+echo "✓ all done. ready to use."
+
