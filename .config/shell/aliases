@@ -30,7 +30,7 @@ alias gpl='git pull'
 # NEOVIM #
 #--------#
 alias nv='nvim'
-alias nvc='nvim $HOME/.config/init.vim'
+#alias nvc='nvim $HOME/.config/init.vim'
 alias nva='nvim $HOME/.config/shell/aliases'
 alias nvp='nvim $HOME/.config/shell/profile'
 
