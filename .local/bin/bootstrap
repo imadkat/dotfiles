@@ -68,26 +68,6 @@ echo "✓ paru installed"
 
 sleep 2
 clear
-#----------#
-# PACKAGES #
-#----------#
-echo "installing packages..."
-PKGS="$HOME/.local/share/packages"
-TOTAL="$(wc -l "$PKGS" | awk '{print $1}')"
-COUNT=0
-while IFS= read -r p; do
-  COUNT=$((COUNT+1))
-  echo "[$COUNT/$TOTAL] $p"
-  echo "-----------------"
-  [ "$(echo "$p" | grep -ic "#")" -gt 0 ] && echo "$p is commented out" && clear && continue
-  paru --needed --noconfirm --removemake -S "$p"
-  sleep 1
-  clear
-done < "$PKGS"
-echo "✓ packages installed"
-
-sleep 2
-clear
 #------#
 # CRON #
 #------#
@@ -187,10 +167,34 @@ echo "✓ done"
 
 sleep 2
 clear
+
+#----------#
+# PACKAGES #
+#----------#
+echo "installing packages..."
+PKGS="$HOME/.local/share/packages"
+TOTAL="$(wc -l "$PKGS" | awk '{print $1}')"
+COUNT=0
+while IFS= read -r p; do
+  COUNT=$((COUNT+1))
+  echo "[$COUNT/$TOTAL] $p"
+  echo "-----------------"
+  [ "$(echo "$p" | grep -ic "#")" -gt 0 ] && echo "$p is commented out" && clear && continue
+  paru --needed --noconfirm --removemake -S "$p"
+  sleep 1
+  clear
+done < "$PKGS"
+echo "✓ packages installed"
+
+sleep 2
+clear
+
 #----------#
 # CLEAN UP #
 #----------#
 echo "cleaning up..."
 # clean up here
 echo "✓ all done. ready to use."
+
+
 
