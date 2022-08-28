@@ -225,6 +225,8 @@ bindsym $mod+Shift+Prior      exec "$HOME/.local/bin/volume" -i -v +1
 bindsym $mod+Shift+End        exec "$HOME/.local/bin/volume" -i -m
 # All
 bindsym $mod+Home             exec "$HOME/.local/bin/volume" -i -o -m
+bindsym $mod+c                exec "$HOME/.local/bin/picker" 
+bindsym $mod+Ctrl+s                exec "$HOME/.local/bin/screenshare" 
 
 #------------#
 # BRIGHTNESS #

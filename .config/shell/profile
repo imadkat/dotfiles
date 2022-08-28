@@ -194,6 +194,12 @@ export TIXATI_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/tixati"
 export VSCODE_PORTABLE="${XDG_DATA_HOME}/vscode"
 
 #------#
+# pass #
+#------#
+
+export PASS_STORE_DIR=$HOME/.local/share/password-store/
+
+#------#
 # WINE #
 #------#
 export WINEPREFIX="${XDG_DATA_HOME}/wine"

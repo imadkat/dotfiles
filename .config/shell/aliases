@@ -30,7 +30,7 @@ alias gpl='git pull'
 # NEOVIM #
 #--------#
 alias nv='nvim'
-#alias nvc='nvim $HOME/.config/init.vim'
+alias nvm='nvim $HOME/.config/nvim/lua/core/mappings.lua'
 alias nva='nvim $HOME/.config/shell/aliases'
 alias nvp='nvim $HOME/.config/shell/profile'
 
@@ -48,6 +48,7 @@ alias cfg='cd $HOME/.config'
 alias cdd='cd $HOME/Downloads'
 alias cdg='cd $HOME/GitHub'
 alias cds='cd $HOME/.config/shell'
+alias nvsc='nv $HOME/.config/sway/config'
 alias nvpk='nvim $HOME/.local/share/packages'
 
 #-------#
