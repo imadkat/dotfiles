@@ -14,6 +14,7 @@
 ! [ -d "$HOME/Documents" ]            && mkdir -p "$HOME/Documents"
 ! [ -d "$HOME/Downloads" ]            && mkdir -p "$HOME/Downloads"
 ! [ -d "$HOME/Desktop" ]              && mkdir -p "$HOME/Desktop"
+! [ -d "$HOME/Packages" ]             && mkdir -p "$HOME/Packages"
 ! [ -d "$HOME/Music" ]                && mkdir -p "$HOME/Music"
 
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -170,6 +171,14 @@ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/java"
 
 
 #------#
+# RUBY #
+#------#
+
+export GEM_HOME=$HOME/.local/share/gem/ruby
+export PATH="$PATH:$GEM_HOME/3.0.0/bin"
+
+
+#------#
 # WGET #
 #------#
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
@@ -194,7 +203,7 @@ export TIXATI_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/tixati"
 export VSCODE_PORTABLE="${XDG_DATA_HOME}/vscode"
 
 #------#
-# pass #
+# PASS #
 #------#
 
 export PASS_STORE_DIR=$HOME/.local/share/password-store/

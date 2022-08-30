@@ -239,10 +239,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 #----------------#
 bindsym $mod+p              exec /usr/bin/bemenu-run | xargs swaymsg exec --
 bindsym $mod+Ctrl+f         exec firefox
-bindsym $mod+Ctrl+Shift+f   exec firefox --private-window
 bindsym $mod+e              exec pcmanfm
 bindsym $mod+Ctrl+c         exec speedcrunch
-
+bindsym $mod+Ctrl+Shift+f   exec alacritty -e fzf
 #-------------#
 # SCREEN LOCK #
 #-------------#
