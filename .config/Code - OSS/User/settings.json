@@ -37,5 +37,12 @@
   "editor.scrollbar.verticalScrollbarSize": 0,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": false,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

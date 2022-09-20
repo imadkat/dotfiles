@@ -226,7 +226,7 @@ bindsym $mod+Shift+End        exec "$HOME/.local/bin/volume" -i -m
 # All
 bindsym $mod+Home             exec "$HOME/.local/bin/volume" -i -o -m
 bindsym $mod+c                exec "$HOME/.local/bin/picker" 
-bindsym $mod+Ctrl+s                exec "$HOME/.local/bin/screenshare" 
+bindsym $mod+Ctrl+s           exec "$HOME/.local/bin/screenshare" 
 
 #------------#
 # BRIGHTNESS #
@@ -241,11 +241,10 @@ bindsym $mod+p              exec /usr/bin/bemenu-run | xargs swaymsg exec --
 bindsym $mod+Ctrl+f         exec firefox
 bindsym $mod+e              exec pcmanfm
 bindsym $mod+Ctrl+c         exec speedcrunch
-bindsym $mod+Ctrl+Shift+f   exec alacritty -e fzf
 #-------------#
 # SCREEN LOCK #
 #-------------#
-exec "$HOME/.local/bin/screensaver"
+#exec "$HOME/.local/bin/screensaver"
 
 bindsym $mod+Shift+b        exec "$HOME/.local/bin/screensaver"
 bindsym $mod+b              exec swaylock
@@ -255,7 +254,7 @@ bindsym $mod+b              exec swaylock
 #-----------------------#
 for_window [title="MEGAsync"]                       floating enable
 for_window [title="SpeedCrunch"]                    floating enable
-for_window [title="mpv"]                            floating enable
+for_window [title="mpv"]                            floating enable 760 x 480
 for_window [class="Pcmanfm"]                        floating enable
 for_window [class="ProtonVPN"]                      floating enable
 for_window [class="protonvpn"]                      floating enable
