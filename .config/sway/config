@@ -31,11 +31,11 @@ output HDMI-A-1 {
   bg          $primary_bg fill #282828
 }
 # Right
-output DP-1 {
-  pos         1920 0
-  res         1920x1080
-  bg          $right_bg fill #282828
-}
+#output DP-1 {
+#  pos         1920 0
+#  res         1920x1080
+#  bg          $right_bg fill #282828
+#}
 
 output * adaptive_sync on
 

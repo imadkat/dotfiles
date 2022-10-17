@@ -12,13 +12,11 @@
   "debug.autoExpandLazyVariables": true,
   "debug.confirmOnExit": "always",
   "debug.console.acceptSuggestionOnEnter": "on",
-  "workbench.activityBar.visible": false,
   "gruvboxMaterial.darkContrast": "soft",
   "gulp.autoDetect": "on",
   "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "prettier.bracketSameLine": true,
-  "window.menuBarVisibility": "toggle",
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.layoutControl.type": "menu",
   "explorer.compactFolders": false,
@@ -43,6 +41,19 @@
   },
   "explorer.confirmDelete": false,
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.menuBarVisibility": "toggle",
+  "sqltools.useNodeRuntime": true,
+  "bracketPairColorizer.depreciation-notice": false,
+  "workbench.activityBar.visible": false,
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
