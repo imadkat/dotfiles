@@ -28,7 +28,7 @@
     "LICENSE": true
   },
   "vim.camelCaseMotion.enable": true,
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Everforest Dark",
   "editor.minimap.enabled": false,
   "editor.scrollbar.horizontalScrollbarSize": 6,
   "editor.scrollbar.vertical": "hidden",

@@ -141,17 +141,18 @@ bindsym $mod+Shift+2        move container to workspace 2
 bindsym $mod+Shift+3        move container to workspace 3
 bindsym $mod+Shift+4        move container to workspace 4
 bindsym $mod+Shift+5        move container to workspace 5
-bindsym Mod1+Shift+1        move container to workspace 5
-bindsym Mod1+Shift+2        move container to workspace 6
-bindsym Mod1+Shift+3        move container to workspace 7
-bindsym Mod1+Shift+4        move container to workspace 8
+bindsym $mod+Shift+6        move container to workspace 6
+bindsym $mod+Shift+7        move container to workspace 7
+bindsym $mod+Shift+8        move container to workspace 8
+bindsym $mod+Shift+9        move container to workspace 9
 bindsym $mod+Shift+period   move container to output right
 bindsym $mod+Shift+comma    move container to output left
 bindsym $mod+Shift+$br      move container to workspace next
 bindsym $mod+Shift+$bl      move container to workspace prev
 bindsym $mod+Ctrl+Shift+period    move workspace to output right
 bindsym $mod+Ctrl+Shift+comma     move workspace to output left
-# Layouts
+
+#  Layouts
 bindsym $mod+o              layout default
 bindsym $mod+i              layout splith
 bindsym $mod+u              layout splitv
@@ -176,10 +177,10 @@ bindsym $mod+1              workspace number 1
 bindsym $mod+2              workspace number 2
 bindsym $mod+3              workspace number 3
 bindsym $mod+4              workspace number 4
-bindsym Mod1+1              workspace number 5
-bindsym Mod1+2              workspace number 6
-bindsym Mod1+3              workspace number 7
-bindsym Mod1+4              workspace number 8
+bindsym $mod+5              workspace number 5
+bindsym $mod+6              workspace number 6
+bindsym $mod+7              workspace number 7
+bindsym $mod+8              workspace number 8
 # Outputs
 bindsym $mod+comma          focus output right
 bindsym $mod+period         focus output left
@@ -255,11 +256,9 @@ bindsym $mod+b              exec swaylock
 for_window [title="MEGAsync"]                       floating enable
 for_window [title="SpeedCrunch"]                    floating enable
 for_window [title="mpv"]                            floating enable 760 x 480
-for_window [class="Pcmanfm"]                        floating enable
 for_window [class="ProtonVPN"]                      floating enable
 for_window [class="protonvpn"]                      floating enable
 for_window [class="Hubstaff"]                       floating enable
-for_window [class="Tixati"]                         floating enable
 for_window [app_id="com.github.wwmm.easyeffects"]   floating enable
 for_window [app_id="$term-float"]                     border pixel 2
 
