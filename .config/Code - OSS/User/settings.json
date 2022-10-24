@@ -28,7 +28,6 @@
     "LICENSE": true
   },
   "vim.camelCaseMotion.enable": true,
-  "workbench.colorTheme": "Everforest Dark",
   "editor.minimap.enabled": false,
   "editor.scrollbar.horizontalScrollbarSize": 6,
   "editor.scrollbar.vertical": "hidden",
@@ -55,5 +54,21 @@
   "workbench.activityBar.visible": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.colorTheme": "Gruvbox Material Dark"
 }
+
+/* EXTENSIONS
+ Auto Rename Tag
+ BRACKET_PAIR
+ DEBUGGER FOR CHROME
+ ES7+REACT/REDUX/....
+ ESLINT
+ EVERFOREST
+ GRUVBOX MATERIAL
+ LIVE_SERVER
+ PATH INTELLISENSE
+ PRETTIER
+ VIM
+
+*/
