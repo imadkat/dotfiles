@@ -17,7 +17,7 @@
   "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "prettier.bracketSameLine": true,
-  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.type": "menu",
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
@@ -55,7 +55,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Gruvbox Material Dark"
+  "workbench.colorTheme": "Gruvbox Dark Medium"
 }
 
 /* EXTENSIONS
@@ -69,6 +69,6 @@
  LIVE_SERVER
  PATH INTELLISENSE
  PRETTIER
- VIM
+ NEOVIM
 
 */
