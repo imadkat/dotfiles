@@ -54,7 +54,7 @@ alias nvpk='nvim $HOME/.local/share/packages'
 #-------#
 # POWER #
 #-------#
-alias die='sudo shutdown -h now'
+alias die='shutdown -h now'
 alias out='pkill sway'
 
 #-----------#
