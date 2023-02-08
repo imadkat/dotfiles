@@ -1,5 +1,5 @@
 pass
-#adb
+adb
 anydesk
 mongodb-compass
 teamviewer
@@ -48,7 +48,6 @@ mpv
 ncdu
 neofetch
 neovim
-nerd-fonts-source-code-pro
 network-manager-applet
 nodejs
 nodejs-svelte-language-server
@@ -113,3 +112,4 @@ zathura-ps
 zip
 zsh
 zsh-completions
+

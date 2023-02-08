@@ -95,7 +95,7 @@ default_floating_border   pixel 1
 gaps inner  4
 smart_gaps  off
 # Font
-font Adobe Source Code SemiBold 10
+font cascadia code semiBold
 # Color Scheme
 client.focused            #ebdbb2 #fbf1c7 #3c3836 #ebdbb2 #ebdbb2
 client.unfocused          #ebdbb2 #d5c4a1 #3c3836 #504945 #504945

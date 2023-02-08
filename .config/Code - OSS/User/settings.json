@@ -1,7 +1,7 @@
 {
   "editor.find.cursorMoveOnType": false,
   "editor.find.loop": false,
-  "editor.fontFamily": "'Source Code Pro SemiBold', 'monospace', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'monospace', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
