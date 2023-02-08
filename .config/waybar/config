@@ -6,14 +6,14 @@
     "modules-center": [],
     "modules-right": ["network", "cpu", "memory", "disk", "temperature", "backlight", "battery", "pulseaudio", "sway/language", "clock", "tray"],
 
-    "sway/workspaces": {
-      "format": "{icon}",
+    "sway/workspaces": { "format": "{icon}",
       "format-icons": {
         "1": "",
         "5": "5",
         "urgent": "",
       }
     },
+
 
     "sway/window": {
       "max-length": 128,
@@ -100,7 +100,7 @@
     },
 
     "network": {
-      "interface": "enp3s0",
+      "interface": "wlp16s0",
       "interval": 1,
       "format-wifi": "{bandwidthDownOctets}  {bandwidthUpOctets} 祝",
       "format-ethernet": "{bandwidthDownOctets}  {bandwidthUpOctets} 祝",
