@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 cat ~/.local/share/extensions | while read extension || [[ -n $extension ]];
 do 

@@ -1,15 +1,11 @@
 pass
 adb
-anydesk
-mongodb-compass
-teamviewer
-postman
+postman-bin
 lynx
 youtube-dl
 gdu
 tmux
 alacritty
-ansible-language-server
 archlinux-keyring
 code
 bash-language-server
@@ -18,7 +14,6 @@ brightnessctl
 clang
 cronie
 dash
-dockerfile-language-server
 dotnet-sdk
 dunst
 easyeffects
@@ -39,6 +34,7 @@ java-language-server
 jq
 libnotify
 lsd
+lf
 lua-language-server
 man-db
 marksman-bin
@@ -52,6 +48,7 @@ network-manager-applet
 nodejs
 nodejs-svelte-language-server
 noto-fonts
+slurp
 noto-fonts-cjk
 noto-fonts-extra
 npm
@@ -74,7 +71,6 @@ reflector
 ristretto
 shellcheck
 shellcheck
-slurp
 speedcrunch
 sqls
 sway
@@ -112,4 +108,3 @@ zathura-ps
 zip
 zsh
 zsh-completions
-

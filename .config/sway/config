@@ -58,7 +58,9 @@ popup_during_fullscreen ignore
 workspace_auto_back_and_forth no
 workspace_layout default
 # Containers
-tiling_drag false
+
+tiling_drag true 
+
 default_orientation horizontal
 
 #-------#
@@ -95,7 +97,7 @@ default_floating_border   pixel 1
 gaps inner  4
 smart_gaps  off
 # Font
-font cascadia code semiBold
+#font cascadia code semiBold
 # Color Scheme
 client.focused            #ebdbb2 #fbf1c7 #3c3836 #ebdbb2 #ebdbb2
 client.unfocused          #ebdbb2 #d5c4a1 #3c3836 #504945 #504945
@@ -258,9 +260,10 @@ for_window [title="SpeedCrunch"]                    floating enable
 for_window [title="mpv"]                            floating enable 760 x 480
 for_window [class="ProtonVPN"]                      floating enable
 for_window [class="protonvpn"]                      floating enable
+for_window [class="tixati"]                         floating enable
 for_window [class="Hubstaff"]                       floating enable
 for_window [app_id="com.github.wwmm.easyeffects"]   floating enable
-for_window [app_id="$term-float"]                     border pixel 2
+for_window [app_id="$term-float"]                   border pixel 2
 
 #----------#
 # INCLUDES #

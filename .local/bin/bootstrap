@@ -50,21 +50,21 @@ clear
 #------#
 # PARU #
 #------#
-echo "checking paru..."
-if ! [ $(command -v paru) ]; then
-  echo "installing paru..."
+echo "checking yay..."
+if ! [ $(command -v yay) ]; then
+  echo "installing yay..."
   cwd="$(pwd)"
-  cd /tmp && rm -rf paru/ && git clone "https://aur.archlinux.org/paru.git" paru && cd paru
-  echo "building paru..."
+  cd /tmp && rm -rf yay/ && git clone "https://aur.archlinux.org/yay.git" yay && cd yay
+  echo "building yay..."
   makepkg --noconfirm -si
   cd "$cwd" || exit
 fi
 
 if ! [ "$?" -eq 0 ]; then
-  echo "x paru didn't install" && exit
+  echo "x yay didn't install" && exit
 fi
 
-echo "✓ paru installed"
+echo "✓ yay installed"
 
 sleep 2
 clear
@@ -180,7 +180,7 @@ while IFS= read -r p; do
   echo "[$COUNT/$TOTAL] $p"
   echo "-----------------"
   [ "$(echo "$p" | grep -ic "#")" -gt 0 ] && echo "$p is commented out" && clear && continue
-  paru --needed --noconfirm --removemake -S "$p"
+  yay --needed --noconfirm --removemake -S "$p"
   sleep 1
   clear
 done < "$PKGS"

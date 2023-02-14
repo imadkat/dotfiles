@@ -17,7 +17,7 @@
   "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "prettier.bracketSameLine": true,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vscode-great-icons",
   "workbench.layoutControl.type": "menu",
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
@@ -51,11 +51,12 @@
   "window.menuBarVisibility": "toggle",
   "sqltools.useNodeRuntime": true,
   "bracketPairColorizer.depreciation-notice": false,
-  "workbench.activityBar.visible": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Gruvbox Dark Medium"
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.config/nvim/init.lua"
 }
 
 /* EXTENSIONS
@@ -70,5 +71,4 @@
  PATH INTELLISENSE
  PRETTIER
  NEOVIM
-
 */

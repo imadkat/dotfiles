@@ -1,11 +1,15 @@
 esbenp.prettier-vscode
-vscode-icons-team.vscode-icons
 jdinhlife.gruvbox
 emmanuelbeziat.vscode-great-icons
-asvetliakov.vscode-neovim
+vscodevim.vim
+pkief.material-icon-theme
+rangav.vscode-thunder-client
 ritwickdey.LiveServer
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 christian-kohler.path-intellisense
 redwan-hossain.auto-rename-tag-clone
 dbaeumer.jshint
+shd101wyy.markdown-preview-enhanced
+alefragnani.bookmarks
+coenraads.bracket-pair-colorizer
