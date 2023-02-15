@@ -8,15 +8,15 @@ return require('packer').startup(function(use)
       auto_clean = true
       compile_on_sync = true
       display = {
-          working_sym     = '⟳', -- The symbol for a plugin being installed/updated
-          error_sym       = '✗', -- The symbol for a plugin with an error in installation/updating
-          done_sym        = '✓', -- The symbol for a plugin which has completed installation/updating
-          removed_sym     = '-', -- The symbol for an unused plugin which was removed
-          moved_sym       = '→', -- The symbol for a plugin which was moved (e.g. from opt to start)
-          header_sym      = '━', -- The symbol for the header line in packer's display
-          show_all_info   = true, -- Should packer show all update details automatically?
-          prompt_border   = 'double', -- Border style of prompt popups.
-          keybindings     = { -- Keybindings for the display window
+          working_sym   = '⟳', -- The symbol for a plugin being installed/updated
+          error_sym     = '✗', -- The symbol for a plugin with an error in installation/updating
+          done_sym      = '✓', -- The symbol for a plugin which has completed installation/updating
+          removed_sym   = '-', -- The symbol for an unused plugin which was removed
+          moved_sym     = '→', -- The symbol for a plugin which was moved (e.g. from opt to start)
+          header_sym    = '━', -- The symbol for the header line in packer's display
+          show_all_info = true, -- Should packer show all update details automatically?
+          prompt_border = 'double', -- Border style of prompt popups.
+          keybindings   = { -- Keybindings for the display window
               quit = 'q',
               toggle_update = 'u', -- only in preview
               continue = 'c', -- only in preview
@@ -66,7 +66,5 @@ return require('packer').startup(function(use)
       use { "williamboman/mason.nvim" }
       use("theprimeagen/harpoon")
       use("tpope/vim-fugitive")
-      use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-      end }
+      use { "NvChad/nvterm" }
     end)
