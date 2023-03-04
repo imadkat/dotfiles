@@ -44,8 +44,16 @@ export TERMINAL="/usr/bin/alacritty"
 #--------#
 # LOCALE #
 #--------#
-export LC_CTYPE="en_US.UTF-8"
-export LANG="C"
+LANG=en_US.UTF-8
+LC_CTYPE=UTF-8
+LANG=C
+LANG=en_US.UTF-8
+LC_ALL=C
+LC_CTYPE=ALL
+export LANG LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY \
+       LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT \
+       LC_IDENTIFICATION LC_ALL
+
 
 #--------------#
 # SCRIPTS PATH #
@@ -232,8 +240,9 @@ fi
 # WAYLAND #
 #---------#
 export XDG_SESSION_TYPE="wayland"
-# export DISPLAY="wayland-0"
-# export GDK_BACKEND=wayland
+#export DISPLAY="wayland-0"
+#export GDK_BACKEND=wayland
+export GDK_BACKEND=x11
 if test -z "${XDG_RUNTIME_DIR}"; then
   export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
 if ! test -d "${XDG_RUNTIME_DIR}"; then
@@ -241,12 +250,18 @@ if ! test -d "${XDG_RUNTIME_DIR}"; then
   chmod 0700 "${XDG_RUNTIME_DIR}"
   fi
 fi
+
+# Enable when the error "unable to create backend" occurs.
+#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#  exec sway
+#fi
+
 export WLR_DRM_NO_MODIFIERS=1
 export XDG_CURRENT_DESKTOP=sway
 
 # Enable these services for screensharing
 systemctl --user enable pipewire.socket 
-#systemctl --user enable pipewire-media-session
+systemctl --user enable pipewire-media-session
 
 # Fire up Sway!
 dbus-run-session sway

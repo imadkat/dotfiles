@@ -49,6 +49,7 @@ alias cdd='cd $HOME/Downloads'
 alias cdg='cd $HOME/GitHub'
 alias cds='cd $HOME/.config/shell'
 alias nvsc='nv $HOME/.config/sway/config'
+alias nvc='cd $HOME/.config/nvim/ && nv .'
 alias nvpk='nvim $HOME/.local/share/packages'
 
 #-------#
