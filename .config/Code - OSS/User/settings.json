@@ -1,10 +1,9 @@
 {
   "editor.find.cursorMoveOnType": false,
   "editor.find.loop": false,
-  "editor.fontFamily": "'Cascadia Code', 'monospace', monospace",
+  "editor.fontFamily": "monospace",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "diffEditor.wordWrap": "on",
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
@@ -34,7 +33,6 @@
   "editor.scrollbar.verticalScrollbarSize": 0,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": false,
-  "window.zoomLevel": 1,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -54,9 +52,25 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "vim.vimrc.enable": true,
-  "vim.vimrc.path": "$HOME/.config/nvim/init.lua"
+  "vim.vimrc.path": "$HOME/.config/nvim/init.lua",
+  "editor.fontSize": 13,
+  "window.zoomLevel": 1,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.root": "public",
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.ts"
+  ],
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false
 }
 
 /* EXTENSIONS

@@ -153,7 +153,8 @@ export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|l
 # QT OPTIONS #
 #------------#
 # Uniform theme for QT and GTK
-export QT_QPA_PLATFORMTHEME=gtk2
+#export QT_QPA_PLATFORMTHEME=gtk2
+export QT_QPA_PLATFORMTHEME=wayland-egl
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 # Will become obsoloete in the future
@@ -228,6 +229,12 @@ export PASS_STORE_DIR=$HOME/.local/share/password-store/
 export WINEPREFIX="${XDG_DATA_HOME}/wine"
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 
+#------------#
+# POSTGRESQL #
+#------------#
+# export PGDATA="$HOME/.config/pgcli/config"
+  
+
 #---------------#
 # GNOME KEYRING #
 #---------------#
@@ -241,8 +248,8 @@ fi
 #---------#
 export XDG_SESSION_TYPE="wayland"
 #export DISPLAY="wayland-0"
-#export GDK_BACKEND=wayland
-export GDK_BACKEND=x11
+export GDK_BACKEND=wayland
+#export GDK_BACKEND=x11
 if test -z "${XDG_RUNTIME_DIR}"; then
   export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
 if ! test -d "${XDG_RUNTIME_DIR}"; then

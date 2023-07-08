@@ -703,6 +703,7 @@ _comps=(
 'heat' '_openstack'
 'hello' '_hello'
 'help' '_sccs'
+'heroku' '_heroku'
 'hexdump' '_hexdump'
 'hilite' '_precommand'
 'histed' '_zed'
@@ -806,7 +807,6 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
-'lf' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'libinput' '_libinput'
@@ -1834,11 +1834,11 @@ autoload -Uz _afew _alacritty _android _archlinux-java _artisan \
             _fleetctl _flutter _force _fwupdmgr _gas \
             _ghc _gist _git-flow _git-journal _git-pulls \
             _git-revise _git-wtf _glances _golang _google \
-            _gpgconf _gtk-launch _hello _hledger _homestead \
-            _hostnamectl _httpie _ibus _include-what-you-use _inxi \
-            _jmeter _jmeter-plugins _jonas _journalctl _jrnl \
-            _kak _kernel-install _kitchen _knife _language_codes \
-            _lf _libinput _lilypond _localectl _loginctl \
+            _gpgconf _gtk-launch _hello _heroku _hledger \
+            _homestead _hostnamectl _httpie _ibus _include-what-you-use \
+            _inxi _jmeter _jmeter-plugins _jonas _journalctl \
+            _jrnl _kak _kernel-install _kitchen _knife \
+            _language_codes _libinput _lilypond _localectl _loginctl \
             _lsd _lunchy _machinectl _mc _meson \
             _middleman _mina _mix _mkinitcpio _mpv \
             _mssh _mussh _mvn _nano _nanoc \
