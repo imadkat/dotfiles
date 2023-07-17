@@ -12,23 +12,22 @@ set $bl       bracketleft
 set $term-float LIBGL_ALWAYS_SOFTWARE=1 alacritty
 
 # Wallpapers
-set $primary_bg "$HOME/.local/share/bg/primary.jpg"  
-set $right_bg   "$HOME/.local/share/bg/right.jpg"  
+set $primary_bg "$HOME/Pictures/wals/primary.jpg"
+set $right_bg   "$HOME/Pictures/wals/right.jpg"  
 
 #----------#
 # BEHAVIOR #
 #----------#
 # Laptop
 output LVDS-1 {
-  bg          $primary_bg fill #282828
+  bg  $primary_bg fill #282828
 }
 
 # Primary
 output HDMI-A-1 {
   transform   0
-  pos         0 0
-  res         1920x1080 
-  bg          $primary_bg fill #282828
+    res         1920x1080 
+    bg          $primary_bg fill #282828
 }
 # Right
 #output DP-1 {
@@ -67,24 +66,24 @@ default_orientation horizontal
 # INPUT #
 #-------#
 input type:keyboard {
-  xkb_layout us,de
-  xkb_variant ,nodeadkeys
-  xkb_options grp:shifts_toggle
-  # Capslock key should work as escape key
-  xkb_options caps:escape
+  xkb_layout us
+    xkb_variant ,nodeadkeys
+    xkb_options grp:shifts_toggle
+# Capslock key should work as escape key
+    xkb_options caps:escape
 }
 
 input "1133:49242:Logitech_USB_Optical_Mouse" {
   accel_profile "flat"
-  pointer_accel -0.25
+    pointer_accel -0.25
 }
 
 # Laptop
 input "2:14:SynPS/2_Synaptics_TouchPad" {
   dwt enabled
-  tap enabled
-  natural_scroll disabled
-  middle_emulation enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled
 }
 
 #---------#
@@ -97,7 +96,7 @@ default_floating_border   pixel 1
 gaps inner  4
 smart_gaps  off
 # Font
-#font cascadia code semiBold
+font Monospace Font 10
 # Color Scheme
 client.focused            #ebdbb2 #fbf1c7 #3c3836 #ebdbb2 #ebdbb2
 client.unfocused          #ebdbb2 #d5c4a1 #3c3836 #504945 #504945
@@ -106,11 +105,11 @@ client.urgent             #af3013 #fbf1c7 #fbf1c7 #af30a3 #af30a3
 # Resize Mode
 mode "resize" {
   bindsym $left   resize shrink   width   20px
-  bindsym $down   resize grow     height  20px
-  bindsym $up     resize shrink   height  20px
-  bindsym $right  resize grow     width   20px
-  bindsym Return  mode "default"
-  bindsym Escape  mode "default"
+    bindsym $down   resize grow     height  20px
+    bindsym $up     resize shrink   height  20px
+    bindsym $right  resize grow     width   20px
+    bindsym Return  mode "default"
+    bindsym Escape  mode "default"
 }
 
 #--------#

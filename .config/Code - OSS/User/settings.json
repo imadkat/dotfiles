@@ -16,7 +16,7 @@
   "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "prettier.bracketSameLine": true,
-  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.type": "menu",
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
@@ -27,7 +27,6 @@
     "LICENSE": true
   },
   "vim.camelCaseMotion.enable": true,
-  "editor.minimap.enabled": false,
   "editor.scrollbar.horizontalScrollbarSize": 6,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
@@ -52,7 +51,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "One Dark Pro",
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "$HOME/.config/nvim/init.lua",
   "editor.fontSize": 13,
@@ -70,7 +69,8 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.minimap.enabled": false
 }
 
 /* EXTENSIONS

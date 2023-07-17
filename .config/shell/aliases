@@ -30,7 +30,7 @@ alias gpl='git pull'
 # NEOVIM #
 #--------#
 alias nv='nvim'
-alias nvm='nvim $HOME/.config/nvim/lua/core/mappings.lua'
+#alias nvm='nvim $HOME/.config/nvim/lua/core/mappings.lua'
 alias nva='nvim $HOME/.config/shell/aliases'
 alias nvp='nvim $HOME/.config/shell/profile'
 
