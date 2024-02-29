@@ -1,7 +1,7 @@
 {
   "editor.find.cursorMoveOnType": false,
   "editor.find.loop": false,
-  "editor.fontFamily": "monospace",
+  "editor.fontFamily": "cascadia code",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "diffEditor.wordWrap": "on",
@@ -16,7 +16,6 @@
   "html.format.indentInnerHtml": true,
   "html.format.templating": true,
   "prettier.bracketSameLine": true,
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.type": "menu",
   "explorer.compactFolders": false,
   "explorer.decorations.badges": false,
@@ -39,6 +38,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[module.css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "explorer.confirmDragAndDrop": false,
   "workbench.startupEditor": "none",
@@ -51,38 +53,43 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "One Dark Pro",
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "$HOME/.config/nvim/init.lua",
-  "editor.fontSize": 13,
-  "window.zoomLevel": 1,
   "diffEditor.ignoreTrimWhitespace": false,
   "liveServer.settings.CustomBrowser": "firefox",
   "liveServer.settings.root": "public",
-  "liveServer.settings.ignoreFiles": [
-    ".vscode/**",
-    "**/*.scss",
-    "**/*.sass",
-    "**/*.ts"
-  ],
+  "liveServer.settings.ignoreFiles": [".vscode/**"],
   "editor.formatOnSave": true,
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.confirmSync": false,
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "tabnine.experimentalAutoImports": true,
+  "debug.console.fontSize": 16,
+  "editor.fontSize": 16,
+  "editor.codeLensFontSize": 16,
+  "terminal.integrated.fontFamily": "cascadia code",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 
 /* EXTENSIONS
- Auto Rename Tag
- BRACKET_PAIR
- DEBUGGER FOR CHROME
- ES7+REACT/REDUX/....
- ESLINT
- EVERFOREST
- GRUVBOX MATERIAL
- LIVE_SERVER
- PATH INTELLISENSE
- PRETTIER
- NEOVIM
-*/
+   Auto Rename Tag
+   BRACKET_PAIR
+   DEBUGGER FOR CHROME
+   ES7+REACT/REDUX/....
+   ESLINT
+   EVERFOREST
+   GRUVBOX theme
+   LIVE_SERVER
+   PATH INTELLISENSE
+   PRETTIER
+   NEOVIM
+  */
